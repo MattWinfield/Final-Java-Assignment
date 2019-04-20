@@ -10,11 +10,19 @@ import java.util.Scanner;
  */
 public class Index {
 
+    static Scanner in = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner in = new Scanner(System.in);
         int num;
 
+        menu();
+        num = in.nextInt();
+        conditionMenu(num);
+
+    }
+
+    public static void menu() {
         System.out.println("Type the number corresponding to the desired "
                 + "application: ");
         System.out.println("==============================");
@@ -26,129 +34,69 @@ public class Index {
         System.out.println("6. For Loop: Counter For Loops");
         System.out.println("7. Months: Arrays ");
         System.out.println("8. Cards: Methods");
-        num = in.nextInt();
+    }
 
+    public static void conditionMenu(int num) {
         if (num == 1) {
-            Lisa();    
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            lisa();
+            menu();
             num = in.nextInt();
+            conditionMenu(num);
+
         }
         if (num == 2) {
             bigNumber();
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            menu();
             num = in.nextInt();
+            conditionMenu(num);
+
         }
         if (num == 3) {
-            Number();
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            number();
+            menu();
             num = in.nextInt();
+            conditionMenu(num);
         }
         if (num == 4) {
-            Two();
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            two();
+            menu();
             num = in.nextInt();
+            conditionMenu(num);
         }
         if (num == 5) {
-            NameAge();
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            nameAge();
+            menu();
             num = in.nextInt();
+            conditionMenu(num);
+
         }
         if (num == 6) {
-            ForLoop();
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            forLoop();
+            menu();
             num = in.nextInt();
+            conditionMenu(num);
         }
         if (num == 7) {
-            Months();
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            months();
+            menu();
             num = in.nextInt();
+            conditionMenu(num);
         }
         if (num == 8) {
-            Cards();
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            cards();
+            menu();
             num = in.nextInt();
-        }
-        else if (num < 1 || num > 8) {
-            System.out.println("Incorrect Option. Try again.");
-            System.out.println("==============================");
-            System.out.println("1. Lisa: Variable Declarations");
-            System.out.println("2. Big Number: If Statements");
-            System.out.println("3. Number: If Else Statements");
-            System.out.println("4. Two: Opperands");
-            System.out.println("5. Name Age: Counter While Loops");
-            System.out.println("6. For Loop: Counter For Loops");
-            System.out.println("7. Months: Arrays ");
-            System.out.println("8. Cards: Methods");
+            conditionMenu(num);
+            
+        } else if (num < 1 || num > 8) {
+            System.out.println("Incorrect Option. Try again");
+            menu();
             num = in.nextInt();
-
+            conditionMenu(num);
         }
     }
 
-    public static void Lisa() {
+    public static void lisa() {
 
         String name = "Lisa";
         int age = 9;
@@ -172,7 +120,7 @@ public class Index {
         }
     }
 
-    public static void Number() {
+    public static void number() {
 
         Scanner input = new Scanner(System.in);
 
@@ -188,7 +136,7 @@ public class Index {
         }
     }
 
-    public static void Two() {
+    public static void two() {
 
         Scanner input = new Scanner(System.in);
 
@@ -212,7 +160,7 @@ public class Index {
 
     }
 
-    public static void NameAge() {
+    public static void nameAge() {
 
         Scanner input = new Scanner(System.in);
         String name;
@@ -231,7 +179,7 @@ public class Index {
         }
     }
 
-    public static void ForLoop() {
+    public static void forLoop() {
 
         Scanner input = new Scanner(System.in);
         int num, sum = 0;
@@ -246,7 +194,7 @@ public class Index {
 
     }
 
-    public static void Months() {
+    public static void months() {
 
         String r = "r";
         String[] months = {"January", "February", "March", "April", "May",
@@ -262,7 +210,7 @@ public class Index {
 
     }
 
-    public static void Cards() {
+    public static void cards() {
 
         String deck[] = {"Ace_of_Hearts", "2_of_Hearts", "3_of_Hearts",
             "4_of_Hearts", "5_of_Hearts", "6_of_Hearts", "7_of_Hearts",
